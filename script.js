@@ -2,7 +2,9 @@
 // Calculadora Web - Lógica en JavaScript
 // Autor: Damian Guano - UTM
 // =====================================================
-
+// Revisión y comentarios: gollum-80 (cuenta colaboradora)
+// Flujo general: clic o tecla -> se lee el atributo data-* del botón
+// -> se llama a la función que corresponde -> actualizarPantalla()
 // ----- 1. Referencias a los elementos del DOM -----
 const pantallaAnterior = document.getElementById("operacion-anterior");
 const pantallaActual = document.getElementById("operacion-actual");
