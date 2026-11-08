@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Web</title>
+  <!-- Hoja de estilos externa -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="calculadora">
+    <!-- PANTALLA: muestra la operación anterior y el número actual -->
+    <div class="pantalla">
+      <div id="operacion-anterior" class="operacion-anterior"></div>
+      <div id="operacion-actual" class="operacion-actual">0</div>
+    </div>
+
+    <!-- TECLADO: cada botón tiene un atributo data-* que indica su función -->
+    <div class="teclado">
+      <button class="btn funcion" data-accion="limpiar">AC</button>
+      <button class="btn funcion" data-accion="borrar">DEL</button>
+      <button class="btn funcion" data-accion="porcentaje">%</button>
+      <button class="btn operador" data-operador="÷">÷</button>
+
+      <button class="btn" data-numero="7">7</button>
+      <button class="btn" data-numero="8">8</button>
+      <button class="btn" data-numero="9">9</button>
+      <button class="btn operador" data-operador="×">×</button>
+
+      <button class="btn" data-numero="4">4</button>
+      <button class="btn" data-numero="5">5</button>
+      <button class="btn" data-numero="6">6</button>
+      <button class="btn operador" data-operador="-">−</button>
+
+      <button class="btn" data-numero="1">1</button>
+      <button class="btn" data-numero="2">2</button>
+      <button class="btn" data-numero="3">3</button>
+      <button class="btn operador" data-operador="+">+</button>
+
+      <button class="btn cero" data-numero="0">0</button>
+      <button class="btn" data-numero=".">.</button>
+      <button class="btn igual" data-accion="igual">=</button>
+    </div>
+  </main>
+
+  <footer class="pie">Desarrollo de Aplicaciones Web · UTM · Damian Guano</footer>
+
+  <!-- Lógica de la calculadora -->
+  <script src="script.js"></script>
+</body>
+</html>

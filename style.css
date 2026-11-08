@@ -1,0 +1,98 @@
+/* ===== Variables de color (fácil de cambiar el tema) ===== */
+:root {
+  --fondo: #1e1f26;
+  --cuerpo: #2a2c36;
+  --tecla: #3a3d4a;
+  --tecla-hover: #4a4e5e;
+  --funcion: #5c6070;
+  --operador: #ff9f1c;
+  --igual: #2ec4b6;
+  --texto: #f5f5f5;
+  --texto-suave: #a0a4b3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: var(--fondo);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--texto);
+  padding: 16px;
+}
+
+/* ===== Contenedor principal ===== */
+.calculadora {
+  width: 100%;
+  max-width: 340px;
+  background: var(--cuerpo);
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Pantalla ===== */
+.pantalla {
+  min-height: 110px;
+  padding: 12px 8px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  word-break: break-all;
+}
+
+.operacion-anterior {
+  font-size: 1rem;
+  color: var(--texto-suave);
+  min-height: 1.4em;
+}
+
+.operacion-actual {
+  font-size: 2.6rem;
+  font-weight: 300;
+}
+
+/* ===== Teclado: cuadrícula de 4 columnas ===== */
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.btn {
+  height: 64px;
+  border: none;
+  border-radius: 16px;
+  background: var(--tecla);
+  color: var(--texto);
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.btn:hover   { background: var(--tecla-hover); }
+.btn:active  { transform: scale(0.95); }
+
+.btn.funcion  { background: var(--funcion); font-size: 1.1rem; }
+.btn.operador { background: var(--operador); font-weight: bold; }
+.btn.igual    { background: var(--igual); font-weight: bold; }
+
+/* El cero ocupa dos columnas */
+.btn.cero { grid-column: span 2; }
+
+.pie {
+  font-size: 0.8rem;
+  color: var(--texto-suave);
+  text-align: center;
+}
